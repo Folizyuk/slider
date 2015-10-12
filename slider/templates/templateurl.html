@@ -1,0 +1,18 @@
+<div>
+    <div class="container" >
+        <div class="slider-btn-left" ng-click="left()"></div>
+        <div class="slider-btn-right" ng-click="right()"></div>
+        <div class="slider-hider">
+            <ul class="slider-list">
+                <li ng-repeat="image in images" ng-class="[{'centerElStart':$index==2},{'firstRightStart':$index==3},{'firstEl':$index==0},{'firstLeftEl':$index==1},{'prevLastEl':$index==4},{'lastEl':$index==5}]">
+                    <div class="imagecontainer">
+                        <img ng-src="{{image.src}}" alt="{{image.alt}}" ng-class="[{'firstRightImg':$index==3},{'centerElImg':$index==2}]" />
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        Set interval:<input ng-model="interval">
+    </div>
+</div>

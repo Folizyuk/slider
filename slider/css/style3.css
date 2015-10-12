@@ -1,0 +1,228 @@
+body{
+    background: url("../img/fon.jpg");
+    background-size: cover;
+}
+
+.container {
+    width: 1010px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.slider-hider {
+    max-width: 940px;
+    max-height: 205px;
+    margin: 0 35px;
+    height: 205px;
+    overflow: hidden;
+    padding: 40px 0px 11px 0px;
+}
+
+.slider-list {
+    list-style: none;
+    width: 100000px;
+    padding: 0;
+}
+
+.slider-list > li {
+    display: block;
+    float: left;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.slider-list img{
+    width: 153px;
+    height: 155px;
+    position: absolute;
+    transition: all 0.2s ease;
+    top:-20px;
+    left:-20px;
+
+    -webkit-transform: rotate(0deg);
+    -webkit-animation-duration: 1s;
+}
+
+@-webkit-keyframes animFirstEl {
+    from{
+        -webkit-transform: translateX(0);
+    }
+    to{
+        -webkit-transform: translateX(-200px);
+    }
+}
+
+.firstEl{
+    -webkit-animation-name: animFirstEl;
+    -webkit-animation-duration: 1s;
+    -webkit-transform: translateX(-200px);
+}
+
+@-webkit-keyframes animFirstLeftEl {
+    from{
+        -webkit-transform: translateX(0);
+    }
+    to{
+        -webkit-transform: translateX(-168px);
+    }
+}
+
+.firstLeftEl{
+    -webkit-animation-name: animFirstLeftEl;
+    -webkit-animation-duration: 1s;
+    -webkit-transform: translateX(-168px);
+}
+
+@-webkit-keyframes animCenterEl {
+    0%{
+        -webkit-transform: translateX(0px) rotate(45deg) scale(1.3);
+    }
+    100%{
+        -webkit-transform: translateX(-218px) rotate(0deg) scale(1);
+    }
+}
+
+.centerElStart{
+    -webkit-animation-name: animCenterEl;
+    -webkit-animation-duration:1s;
+
+    padding-left: 35px;
+    padding-right: 35px;
+    -webkit-transform: translateX(-218px) rotate(0deg) scale(1);
+}
+
+@-webkit-keyframes animcenterElImg{
+    0%{
+        -webkit-transform: rotate(-45deg) scale(1.2);
+    }
+    100%{
+        -webkit-transform: rotate(0deg) scale(1);
+    }
+}
+
+.centerElStart .imagecontainer img.centerElImg{
+    -webkit-animation-name: animcenterElImg;
+    -webkit-animation-duration: 1s;
+    -webkit-transform: rotate(0deg) scale(1);
+}
+
+@-webkit-keyframes animFirstRightEl {
+    0%{
+        -webkit-transform: translateX(0px) rotate(0deg) scale(1);
+    }
+    100%{
+        -webkit-transform: translateX(-212px) rotate(45deg) scale(1.3);
+    }
+}
+
+.firstRightStart{
+    -webkit-animation-name: animFirstRightEl;
+    -webkit-animation-duration: 1s;
+    -webkit-transform: translateX(-212px) rotate(45deg) scale(1.3);
+}
+
+@-webkit-keyframes animFirstRightElImg {
+    0%{
+        -webkit-transform: rotate(0deg) scale(1);
+    }
+    100%{
+        -webkit-transform: rotate(-45deg) scale(1.2);
+    }
+}
+
+.firstRightStart .imagecontainer img.firstRightImg{
+    -webkit-animation-name: animFirstRightElImg;
+    -webkit-animation-duration: 1s;
+    -webkit-transform: rotate(-45deg) scale(1.2);
+}
+
+@-webkit-keyframes animPrevLastEl {
+    from{
+        -webkit-transform: translateX(0);
+    }
+    to{
+        -webkit-transform: translateX(-165px);
+    }
+}
+
+.prevLastEl{
+    -webkit-animation-name: animPrevLastEl;
+    -webkit-animation-duration: 1s;
+    -webkit-transform: translateX(-165px);
+}
+
+@-webkit-keyframes animLastEl {
+    from{
+        -webkit-transform: translateX(0);
+    }
+    to{
+        -webkit-transform: translateX(-170px);
+    }
+}
+
+.lastEl{
+    -webkit-animation-name: animLastEl;
+    -webkit-animation-duration: 1s;
+    -webkit-transform: translateX(-170px);
+}
+
+.animation img:hover{
+    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg) scale(1.2);
+}
+
+/**/
+.slider-btn-left {
+    float: left;
+    position: relative;
+    top: 16px;
+    height: 210px;
+    width: 30px;
+    background: url('../img/left.png') no-repeat;
+    background-size: contain;
+    background-position-y: center;
+}
+
+.slider-btn-left:hover{
+    cursor: pointer;
+}
+
+.slider-btn-right {
+    float: right;
+    position: relative;
+    top: 16px;
+    height: 210px;
+    width: 30px;
+    background: url('../img/right.png') no-repeat;
+    background-size: contain;
+    background-position-y: center;
+}
+
+.slider-btn-right:hover{
+    cursor: pointer;
+}
+
+.imagecontainer {
+    display:block;
+    width: 120px;
+    height: 120px;
+    border: 2px solid royalblue;
+    overflow: hidden;
+    position:relative;
+    transition: all 0.2s ease;
+}
+
+.imagecontainer:hover {
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari and Chrome */
+}
+
+.imagecontainer img:hover{
+    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg) scale(1.2);
+}
+
+
